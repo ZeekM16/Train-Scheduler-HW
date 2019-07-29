@@ -3,7 +3,7 @@ const firebaseConfig = {
     databaseURL: "https://train-scheduler-e1777.firebaseio.com",
     projectId: "train-scheduler-e1777",
   };
-
+// could not get firebase to link with what i was typing in
 
 
   firebase.initializeApp(firebaseConfig);
@@ -32,9 +32,23 @@ $("#submit-button").on("click", function (event) {
         frequency: frequency,  
     });
 
+//Missing the collected input (above) and port it to firebase 
+
 
     database.ref.on("child_added", function (snapshot) {
         snapshotValue = snapshot.val();
         // console.log(snapshotValue.trainName)
     });
 });
+
+// (childSnapshot.val());
+
+// console.log(name, number, destination, time, frequency);
+
+//Missing time formatting
+
+//Missing ("Current time: " + moment().format("HHmm"));
+
+// Needed to append data to table
+
+// was going to add a reset functionality
